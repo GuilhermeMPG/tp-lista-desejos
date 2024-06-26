@@ -1,0 +1,25 @@
+<nav class="navbar bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex" href="#">
+      <img
+        src="assets/img/logo.png"
+        alt="Logo"
+        width="40"
+        height=""
+        class="align-self-center"
+      />
+      <h3>WishList</h3>
+    </a>
+    <button
+      *ngIf="exibirOpcoes"
+      style="color: black ; border-color: black;"
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-align-justify"
+      class="p-button-secondary p-button-text"
+      (click)="visibleChange.emit()"
+
+    ></button>
+  </div>
+</nav>

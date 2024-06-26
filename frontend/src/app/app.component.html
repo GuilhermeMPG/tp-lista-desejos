@@ -1,0 +1,8 @@
+<app-header (visibleChange)="visible = !visible" [exibirOpcoes]="mostrarOpcaoHeader"></app-header>
+<div class="layout">
+  <app-sidebar class="sidebar" [ngStyle]="{ 'transform': visible ? 'translateX(0)' : 'translateX(-100%)' }" (visibleChange)="visible = !visible"></app-sidebar>
+  <div class="content" [ngStyle]="{ 'padding-left.px': visible ? 250 : 0 }">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<app-footer class="footer"></app-footer>

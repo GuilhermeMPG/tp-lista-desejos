@@ -1,0 +1,73 @@
+<main>
+  <div class="box">
+    <div class="inBox"  style="margin-bottom:0 ;">
+      <p  style="margin-bottom:0 ;">Sing Up</p>
+    </div>
+    <form [formGroup]="creatLoginForm" (ngSubmit)="onSubmit()">
+      <div class="inBox">
+        <span class="p-float-label">
+          <input type="text" pInputText formControlName="nome" />
+          <label for="float-input">Nome</label>
+        </span>
+      </div>
+      <div class="inBox">
+        <span class="p-float-label">
+          <input type="text" pInputText formControlName="email" />
+          <label for="float-input">E-mail</label>
+        </span>
+      </div>
+      <div class="inBox">
+        <span class="p-float-label">
+          <input
+            type="{{ showPassword ? 'text' : 'password' }}"
+            pInputText
+            formControlName="password"
+          />
+          <label for="float-input">Senha</label>
+          <button
+            type="button"
+            pButton
+            pButtonType="button"
+            (click)="togglePasswordVisibility('password')"
+            [icon]="showPassword ? 'pi pi-eye-slash' : 'pi pi-eye'"
+            class="p-button-rounded p-button-text toggle-button"
+          ></button>
+        </span>
+      </div>
+      <div class="inBox">
+        <span class="p-float-label">
+          <input
+            type="{{ showPasswordConfirme ? 'text' : 'password' }}"
+            pInputText
+            formControlName="passwordConfirme"
+          />
+          <label for="float-input">Confirmar Senha</label>
+          <button
+            type="button"
+            pButton
+            pButtonType="button"
+            (click)="togglePasswordVisibility('passwordConfirme')"
+            [icon]="showPasswordConfirme ? 'pi pi-eye-slash' : 'pi pi-eye'"
+            class="p-button-rounded p-button-text toggle-button"
+          ></button>
+        </span>
+      </div>
+      <div class="inBox">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Cadastrar"
+          class="p-button-outlined p-button-success"
+        ></button>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Sign In"
+          class="p-button-raised p-button-success"
+        ></button>
+      </div>
+    </form>
+  </div>
+</main>

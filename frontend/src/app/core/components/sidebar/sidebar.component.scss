@@ -1,0 +1,70 @@
+$cor-fundo-padrao: transparent;
+$cor-fundo-hover: rgb(20, 95, 27);
+$cor-fundo-ativo: rgb(11, 63, 9);
+$cor-texto: white;
+$cor-texto-hover: rgba(20, 20, 20, 0.795);
+
+a {
+  padding-right: 10px;
+}
+h3 {
+  margin-left: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(53, 53, 53);
+  height: 91vh;
+  opacity: 0.95;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 1px;
+  margin-right: 5px;
+  align-items: center;
+
+}
+
+.opcao{
+  margin: 15px;
+
+}
+
+.button {
+  background-color: $cor-fundo-padrao;
+  color: $cor-texto;
+  /* padding: 10px 20px; */
+  border: 3px inset #2a572a;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  width: 180px;
+  height: 50px;
+  font-weight: 500;
+  &:hover {
+    background-color: $cor-fundo-hover;
+    color: $cor-texto-hover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+
+
+}
+
+#hr{
+    border: 3px double white;
+    width: 100%;
+    justify-self: flex-end;
+}
+
+.div_opcao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+
+}
+

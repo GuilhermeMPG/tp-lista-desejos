@@ -1,0 +1,73 @@
+
+<p-dialog
+  [header]="header"
+  [(visible)]="display"
+  [modal]="true"
+  [draggable]="false"
+  [resizable]="false"
+  (onHide)="onCancel()"
+  [breakpoints]="{'960px': '75%', '640px': '85%', '499px': '95%'}"
+  [style]="{width : '50%'}"
+
+>
+  <div class="grid p-fluid m-5">
+    <div class="col-10  mb-4">
+      <h5>Produto</h5>
+      <input type="text" pInputText [(ngModel)]="newProduct.nome" name="produto"/>
+    </div>
+
+    <div class="col-10 ">
+      <div class="mb-4">
+        <h5>Descrição</h5>
+        <textarea
+          rows="5"
+          cols="30"
+          pInputTextarea
+          [(ngModel)]="newProduct.descricao"
+        name="descricao"></textarea>
+      </div>
+    </div>
+    <div class="col-10 mb-5 ">
+    <div class="field col-10 ">
+      <h5 for="currency-us">Preço</h5>
+      <p-inputNumber
+        [(ngModel)]="newProduct.preco"
+        mode="currency"
+        currency="BRL"
+        locale="en-US"
+        name="preco"
+      >
+      </p-inputNumber>
+    </div>
+  </div>
+
+  <div class="col-10 ">
+    <h5>Prioridade</h5>
+
+    <p-slider [(ngModel)]="newProduct.prioridade" name="prioridade"></p-slider>
+    <span for=""> {{newProduct.prioridade}}</span>
+
+</div>
+</div>
+
+  <ng-template pTemplate="footer">
+    <button
+      pButton
+      pRipple
+      icon="pi pi-check"
+      type="submit"
+      label="Salvar"
+      class="p-button-outlined"
+      (click)="onSalvar()"
+    ></button>
+    <button
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-power-off"
+      label="Cancelar"
+      class="p-button-warning"
+      (click)="onCancel()"
+    ></button>
+  </ng-template>
+</p-dialog>

@@ -1,0 +1,41 @@
+.but {
+  margin-right: 10px;
+}
+.but2 {
+  border-color: green;
+  background-color: green;
+}
+:host ::ng-deep {
+  #floatButton {
+    float: right;
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    width: 70px;
+    height: 65px;
+
+  }
+  .z-5 {
+    z-index: 1 !important;
+  }
+  .p-datatable-wrapper{
+    border-radius: 15px;
+  }
+
+}
+div {
+  position: relative;
+  overflow: visible;
+  margin: 1px;
+}
+
+@media (max-width: 767px) {
+  .classDescricao {
+    display: none;
+  }
+}
+@media (max-width: 413px) {
+  .but {
+    margin-bottom: 10px;
+  }
+}

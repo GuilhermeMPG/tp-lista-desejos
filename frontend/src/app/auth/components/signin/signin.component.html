@@ -1,0 +1,55 @@
+<main>
+  <div class="box">
+    <div class="inBox">
+      <p>Sing In</p>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="inBox">
+        <span class="p-float-label">
+          <input
+            id="float-input"
+            type="text"
+            pInputText
+            formControlName="email"
+          />
+          <label for="float-input">E-mail</label>
+        </span>
+      </div>
+      <div class="inBox">
+        <span class="p-float-label">
+          <input
+            type="{{ showPassword ? 'text' : 'password' }}"
+            pInputText
+            formControlName="senha"
+          />
+          <label for="float-input">Senha</label>
+          <button
+            type="button"
+            pButton
+            pButtonType="button"
+            (click)="togglePasswordVisibility('senha')"
+            [icon]="showPassword ? 'pi pi-eye-slash' : 'pi pi-eye'"
+            class="p-button-rounded p-button-text toggle-button"
+          ></button>
+        </span>
+      </div>
+      <div class="inBox">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Entrar"
+          class="p-button-outlined p-button-success"
+          (click)="onSubmit()"
+        ></button>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Sign Up"
+          class="p-button-raised p-button-success"
+        ></button>
+      </div>
+    </form>
+  </div>
+</main>

@@ -1,0 +1,23 @@
+<div class="sidebar" (onHide)="visibleChange.emit()">
+  <div class="div_opcao">
+    <div class="opcao">
+      <button class="button" (click)="navigator('home')">Home</button>
+    </div>
+    <div class="opcao">
+      <button class="button" (click)="navigator('wish')">Wish</button>
+    </div>
+    <div class="opcao">
+      <button class="button" (click)="navigator('wish')">Contabilidade</button>
+    </div>
+  </div>
+
+  <div class="div_opcao">
+    <hr id="hr" />
+    <div class="opcao">
+      <button class="button" (click)="navigator('wish')">Perfil</button>
+    </div>
+    <div class="opcao">
+      <button class="button" (click)="sair()">Sair</button>
+    </div>
+  </div>
+</div>
